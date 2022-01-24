@@ -1,0 +1,49 @@
+--create Schema
+-- Untuk membuat Schema dalam bahasa SQL dapat menggunakan perintah berikut
+CREATE SCHEMA IF NOT EXISTS schema_name;
+
+--Create Table
+--Berikut cara untuk membuat table di dalam SQL
+CREATE TABLE IF NOT EXISTS table_name (
+    column1 datatype(length) column_constraint,
+    column2 datatype(length) column_constraint,
+    column3 datatype(length) column_constraint,
+
+table_constraints
+    PRIMARY KEY (column1)
+    FOREIGN KEY (column2)
+    REFERENCES table_name(column_name)
+);
+
+--Insert
+--perintah insert digunakan untuk memasukkan value ke dalam table atau dari table lain.
+INSERT INTO table_name VALUES (data1, data2,....)
+
+--update
+--digunakan untuk mengubah value dalam table
+UPDATE table_name
+SET column1 = data1, column2 = data2, ...
+WHERE condition
+
+--select
+--digunakan untuk melihat table dalam kondisi yang spesifik
+SELECT * FROM table_name;
+
+SELECT Column1, Column2,... FROM table_name;
+
+--Alter Table
+--digunakan untuk merubah beberapa perubahan ke dalam skema. kita juga dapat menambah atau menghapus kolom menggunakan fungsi ini
+ALTER TABLE table_name ADD column1 datatype(length);
+ALTER TABLE table_name DROP COLUMN column1;
+
+--Delete
+--digunakan untuk menghapus baris di tabel dengan kondisi yang spesifik
+DELETE FROM table_name WHERE condition;
+
+--Truncate
+--digunakan untuk menghapus semua baris di tabel
+TRUNCATE TABLE table_name;
+
+--Drop
+--digunakan untuk menghapus tabel
+DROP TABLE table_name;
